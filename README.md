@@ -1,2 +1,2 @@
-# ProyectoProgramacion
-Un viaje por el caribe
+# Proyecto de Programacion
+Cruzero por el Caribe
