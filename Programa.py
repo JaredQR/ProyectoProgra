@@ -21,6 +21,9 @@ while True:
         break
     except ValueError:
         print("Ingrese su n° de su DNI correctamente...")
+
+menu()
+op(n,d,e,s)
         
 
 
