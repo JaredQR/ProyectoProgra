@@ -2,7 +2,7 @@
 #Un viaje por el caribe
 import sys
 import os
-import modulo import*
+from modulo import*
 
 print("\t Viaje por el Caribe")
 print("")
