@@ -6,11 +6,19 @@ from modulo import*
 
 print("\t Viaje por el Caribe")
 print("")
-print("Usted desea registrarse?.")
+#Registro de persona
+print("\tRegistrate para recibir novedades.")
 print("")
-n=input("Ingresar su nombre completo :")
+print("Inscribete y se el primero en conocer nuestras ultimas promociones de cruceros, los destinos mas populares y aprende a planificar mejor tu viajes")
+print("")
+print(" (*) Campos obligatorios ")
+print("")
+n=input("Nombre :")
 while(not verificar(n)):
     n=input("Ingres su nombre completo y correctamente :")
+ape=input("Apellido :")
+while(not verificar(ape)):
+    n=input("Ingres su apellido completo y correctamente (*) :")
 dni=""
 while True:
     try:
@@ -33,7 +41,7 @@ while True:
         print("Ingrese su numero de celular correctamente...")
 
 menu()
-op(n,d,e,s)
+op(n,a,d,nt)
         
 
 
