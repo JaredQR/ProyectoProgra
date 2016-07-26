@@ -5,6 +5,7 @@ import os
 from modulo import*
 
 print("\t Viaje por el Caribe")
+print("\t Disfruta de un tour en tierra mientras viajas en crucero")
 print("")
 #Registro de persona
 print("\tRegistrate para recibir novedades.")
