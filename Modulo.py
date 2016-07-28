@@ -1,5 +1,7 @@
 import sys
 import os
+import time
+
 def menu():
     print("")
     print("MENU")
