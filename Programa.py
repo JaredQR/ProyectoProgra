@@ -33,7 +33,7 @@ while True:
 numtele=""
 while True:
     try:
-        nt=int(input("Ingrese su numero :"))
+        nt=int(input("Ingrese su numero de celular:"))
         while(len(str(nt))!=9):
             nt=int(input("Los numeros de celular son de 9 cifras numericas:"))
         numtele=str(nt)
