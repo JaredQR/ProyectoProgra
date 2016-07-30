@@ -42,7 +42,7 @@ while True:
         print("Ingrese su numero de celular correctamente...")
 
 menu()
-op(n,a,d,nt)
+op(n,ape,d,nt)
         
 
 
