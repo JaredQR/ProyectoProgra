@@ -1,1 +1,16 @@
+import time,os,sys
+os.system("clear")
 
+print("\t\t***********")
+print("\t\tPROMOCIONES")
+print("\t\t***********\n")
+
+print("1.- BUSCADOR DE CRUCEROS ")
+print("2.- PLANEACION POR DESTINOS ")
+print("3.- PLANEACION POR PUERTOS")
+print("4.- PLANEACION POR BARCOS")
+print("5.- PAQUETES")
+
+o=input("Seleccione el tipo de opccion que desee realizar")
+
+while(o!=1 and o!=2 and o!=3 and o!=4 and o!=5):
