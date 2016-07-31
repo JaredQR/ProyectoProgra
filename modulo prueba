@@ -1,0 +1,134 @@
+import sys
+
+def ayuda(n,ape,d,nt):
+    
+    print("1.-Preguntas Frecuentes")
+    print("2.-Terminos y condiciones de Reserva")
+    print("3.-Proteccion y Seguridad")
+    print("4- Contactenos")
+    print("5.-Regresar al Menu Anterior")
+    
+    print("")
+    
+    hp=input("Elija una opcion: ")
+    
+    if hp=="1":
+        
+        print("A)¿Qué sucede en caso de que necesite una dieta especial?")
+        print("B)¿Qué sucede con mi documentación, las visas y los pasaportes?")
+        print("C)¿Qué debería incluir en mi equipaje?")
+        print("D)¿Qué elementos no puedo llevar a bordo?")
+        print("E)¿A qué hora debo embarcar el día programado para zarpar y en los puertos de escala?")
+        print("F)¿Cuántas maletas puedo llevar?")
+        print("")
+        pr=input("Seleccione pregunta:_")
+        print()
+        if pr==("a" or "A"):
+            print("A) Si tienes alergia a algún alimento en particular o sigues una dieta especial, que incluya comida Kosher o alimentos sin gluten, avísale a tu agente de reservas de Norwegian o a tu agente de viajes al momento de hacer tu reserva. Para obtener estos productos debe enviarse un aviso 30 días antes de zarpar a fin de garantizarte que cumpliremos con lo que solicitaste. No podemos garantizar los pedidos de comida Kosher realizados dentro de los 30 días antes de la fecha de partida. Con el fin de proteger a todos nuestros huéspedes, está prohibido llevar a bordo cualquier alimento que necesite que el personal lo prepare o que necesite almacenamiento en frío en nuestras cocinas.")
+            print("")
+        elif pr==("b" or "B"):
+            print("B) Antes de zarpar, todos los huéspedes deberán proporcionar su información personal básica. Haz clic aquí para ver información detallada sobre la documentación necesaria para viajar, antes de completar tu formulario de check-in en línea .")
+            print("")
+        elif pr==("c" or "C"):
+            print("C) En cuanto a la ropa, puedes usar un estilo informal de resort o uno elegante; tú eliges. Esa es la libertad de viajar con Freestyle Cruising. Incluso tenemos el evento especial Dress-Up or Not Night. Es la oportunidad perfecta para fotografiarte con tu familia, con alguien muy especial e, incluso, con el capitán. Luce ropa informal durante el día, en el bufé y en la mayoría de los restaurantes especializados. Las mujeres pueden usar vestidos informales y de verano, faldas, pantalones, pantalones capri, pantalones cortos, jeans y blusas. Los hombres pueden vestir pantalones caqui, jeans, pantalones cortos y camisas informales. En el bufé y en el restaurante al aire libre puedes vestir traje de baño, pero deberás usar una camisa o alguna otra prenda para cubrirte el torso y calzado. También puedes usar ropa informal de día o de noche, el día del embarque. Debes usar ropa formal si cenas en el comedor principal de la popa, nuestro comedor más formal, y en Le Bistro en los cruceros que duran más de cinco días. Las mujeres pueden usar pantalones sport, jeans, vestidos, faldas y blusas. Los hombres pueden usar jeans o pantalones sport con camisas con cuello y zapatos cerrados. En los cruceros por Bermudas se aceptan los típicos pantalones bermudas, medias largas, mocasines y blazers. Queremos que te sientas cómodo, pero no podrás usar camisetas sin mangas para hombres, chancletas, gorras de béisbol, viseras y jeans demasiado desgastados, con orificios o rotos, o por debajo de la cadera en los comedores principales o en los restaurantes especializados. Los niños de hasta 12 años usar pantalones cortos de vestir en todos nuestros restaurantes. Te recomendamos llevar un suéter en caso de que sientas frío debido al aire acondicionado. Como recogeremos tus maletas la noche antes del regreso no olvides empacar una maleta pequeña con medicamentos y objetos esenciales.")
+        elif pr==("d" or "D"):
+            print("D) Los pasajeros no pueden abordar con ninguna bebida con o sin alcohol de ningún tipo, incluso agua, gaseosas ni jugos*; armas de fuego, armas de ningún tipo, municiones, sustancias explosivas ni ningún producto de naturaleza peligrosa; ni animales de ningún tipo, salvo animales guía o de servicio, siempre que el pasajero lo notifique a la empresa antes del crucero en el que planea llevar dicho animal y acepta asumir toda responsabilidad por cualquier gasto, daño, lesión o pérdida relacionados con o causados por dicho animal.")
+            print("")
+        elif pr==("e" or "E"):
+            print("E)Hora de arribo a la terminal del crucero:")
+            print("Para su comodidad y conveniencia, le recomendamos a aquellos huéspedes que aún no hayan completado el check-in en línea que arriben a la terminal del crucero dos (2) horas antes de la hora programada de embarque que aparece en la documentación del crucero. Aquellos huéspedes que hayan completado el check-in en línea deben arribar a la terminal una (1) hora antes de la hora de embarque programada que aparece en los documentos del crucero. RECOMENDAMOS a los huéspedes que completen su check-in en línea al menos cuatro (4) días antes de zarpar")
+            print("Hora de embarque final:")
+            print("A fin de facilitar el proceso de embarque y el procesamiento de tus eDocs, y de cumplir con las nuevas normas gubernamentales aplicables al manifiesto de salida, todos los huéspedes deberán completar el check-in en línea al menos un día antes de zarpar; además deberán completar el check-in en la terminal del crucero y estar a bordo del barco una hora antes de la hora de salida indicada en los documentos del crucero; de lo contrario no se les permitirá zarpar. Ten en cuenta que aquellos huéspedes que no hayan completado su check-in en línea deberán arribar al puerto dos (2) horas antes de zarpar. Los huéspedes que lleguen tarde podrán abordar el barco en un puerto aprobado de escala incluido en el itinerario programado. En este caso, el huésped será responsable de pagar todas las tarifas y gastos de viajes correspondientes en el puerto de escala.")
+            print("Hora de embarque en puertos de escala:")
+            print("En todos los puertos de escala, es responsabilidad de los huéspedes regresar a bordo una (1) hora antes de la hora de salida programada del barco. Tenga en cuenta que la hora a bordo puede diferir de la del puerto de escala; es responsabilidad de los huéspedes seguir la hora de a bordo. En caso de que un huésped pierda el barco, todos los gastos en los que incurra para volver a abordar el barco correrán por su cuenta")
+        elif pr==("f" or "F"):
+            print("F) Todas las personas pueden llevar dos piezas de equipaje personal a bordo, cada pieza puede pesar un máximo de 50 libras. Sin embargo, los pasajeros que viajan por avión deberán consultar con su aerolínea para ver las restricciones específicas.")
+        else:
+            print("opcion incorrecta. Intentelo de nuevo")
+            
+            menu()
+        ayuda(n,ape,d,nt)
+            
+           
+
+    elif hp=="2":
+        print()
+        print(" TERMINOS Y CONDICONES DE RESERVA ")
+        print("-----------------------------------")
+        print("1.1 ¿Cómo reservo un crucero?")
+        print("se ofrecen por medio de su agente de viajes Cualquier agente de viajes que el pasajero utilice en relación con un crucero Internacional será agente del pasajero  El pasajero responderá siempre ante crucero internacional por el costo del pasaje. Aunque crucero internacional  se esforzará por satisfacer sus solicitudes, el espacio está sujeto a disponibilidad al momento de solicitar la reservacion.")
+        print()
+        print("1.2 ¿Qué comprende mis vacaciones en crucero?")
+        print("El precio de las vacaciones en crucero incluye camarote, transportación marítima, la mayoría de las comidas, algunas bebidas y la mayoría de los entretenimientos a bordo del barco. Todos los precios son calculados en dólares estadounidenses, basado por persona en ocupación doble del camarote")
+        print()
+        print("1.3 ¿Cómo puedo obtener el precio más bajo por persona?")
+        print("Los precios de los cruceros fluctúan de acuerdo al barco, a su itinerario y a la temporada Para asegurarse de obtener los mejores precios disponibles de acuerdo ala fecha de su viaje y a la categoría de camarote elegida debe hacer las reservacionescon anticipación y verificar con un agente de viajes autorizado en su país o con el Representante Local de Crucero Internacional, cual es la mejor promociónpara usted.")
+        print()
+        print("1.4 ¿Se garantizan las tarifas?")
+        print("Crucero Internacional se reserva el derecho de aumentar todos los precios que aparecenen este folleto sin previo aviso  No obstante, salvo los derechos portuarios, los cargosno gubernamentales e impuestos y/o derechos de aeropuerto, los pasajeros que hayanefectuado reservaciones confirmadas con depósito o los que hayan hecho el pagocompleto, se verán protegidos en caso de un aumento de precios. Los derechos de aeropuerto, los derechos de puerto y los impuestos y honorarios quecobran los distintos gobiernos; están sujetos a cambios sin previo aviso, y cualquieraumento deberá pagarlo el pasajero independientemente si su reservacion tiene o nodeposito o pago final. ")
+        
+        print()
+        print("1.5 ¿Necesito seguro?")
+        print("La responsabilidad de Royal Caribbean® por pérdidas o daños y perjuicios, está limitadapor el Contrato de Transporte en Crucero. Royal Caribbean® recomienda a todos lospasajeros verificar la cobertura de su seguro actual. Se recomiendan los segurosmédicos, de viajes, de equipaje y de lesiones corporales, y ellos pueden comprarsepor intermedio de su agente de viajes y en algunos países, por medio de la compañíade seguros.")
+        print()
+        print("1.6 ¿Qué condiciones aplican para grupos?")
+        print("Las condiciones de grupos pueden variar de acuerdo a la temporada, el barco y lacantidad de pasajeros participantes. Las condiciones de depósitos, pagos finales,cancelaciones y términos y condiciones, son la responsabilidad del agente de viajes.Consulte a su agente de viajes sobre cuál es la mejor fecha y tarifa que le aplica.")
+        
+        ayuda(n,ape,d,nt)
+        menu()
+        
+        
+
+    elif hp=="3":
+        print()
+        print(" PROTECCION Y SEGURIDAD")
+        print("------------------------")
+        print("la protección y seguridad de los huéspedes y la tripulación es nuestra primera prioridad, y un aspecto crucial de nuestras operaciones. El registro de seguridad marítima de nuestros 42 años de historia ilustra claramente nuestro compromiso con la seguridad de los millones de huéspedes y de la tripulación que navegan en nuestros barcos. Tomamos muchas medidas de seguridad y nuestros barcos exceden lo que las autoridades normativas exigen, lo cual es parte de nuestro compromiso continuo con la innovación y mejora permanentes en todos los aspectos de nuestro negocio.")
+        print()
+        print("Al comienzo de cada crucero, todos los huéspedes y la tripulación deben realizar un simulacro de emergencia para asegurarnos de que sepan qué hacer y hacia dónde ir en la improbable situación de una emergencia. Para asegurarnos aún más de que conozcan su lugar específico de reunión, lo señalamos en las llaves de los huéspedes. El lugar también se indica claramente en la parte trasera de la puerta de cada camarote.")
+        print()
+        print("Además de los simulacros de emergencia para nuestros huéspedes, nuestros oficiales y la tripulación realizan simulacros semanales, mensuales y anuales en cada barco, y llevan a cabo amplios cursos especializados, obtienen certificaciones y prevén escenarios para estar preparados en los improbables casos de situaciones de emergencia, incluido el entrenamiento para procedimientos de evacuación de los barcos. Toda nuestra flota cuenta con suficientes salvavidas para todos los huéspedes e integrantes de la tripulación a bordo, además de capacidad adicional de reserva.")
+        print()
+        print("Todos los barcos son diseñados y operados en conformidad con los estrictos requerimientos de la Organización Marítima Internacional, el organismo de la ONU que establece estándares globales de seguridad y funcionamiento de cruceros, codificados en el Convenio Internacional para la Seguridad de la Vida Humana en el Mar (SOLAS, Safety of Life at Sea). Las regulaciones relacionadas con la seguridad son rigurosas y a menudo cumplimos con creces lo requerido, por ejemplo, llevando provisiones de respaldo mecánico, náutico y de seguridad.")
+        print()
+        print("Además, nuestras naves, sin importar dónde navegan en el mundo, cumplen con los requerimientos de la Ley sobre seguridad de los pasajeros de cruceros (CVSSA, U.S. Cruise Vessel Security and Safety Act) de Estados Unidos, incluida la altura de las barandas, el control de los accesos, circuito cerrado de televisión, preparación médica, informes de denuncias delictuales y formación de la tripulación. Nuestros propios requerimientos generalmente exceden los que especifica la CVSSA. Trabajamos en conjunto con las autoridades normativas para mejorar las leyes de seguridad y participamos regularmente en conversaciones y estudios para informar a los legisladores de las prácticas actuales y ofrecer nuestra perspectiva sobre las regulaciones y estándares para resguardar la seguridad.")
+        print()
+        print("Las autoridades de los países de abanderamiento y otros organismos reguladores de la seguridad marítima de cada país visitan regularmente nuestros barcos, como la Guardia Costera de Estados Unidos. Sus exámenes se concentran en el equipo de supervivencia y seguridad, y en los elementos de protección medioambiental. Estos funcionarios tienen la autoridad de restringir la navegación de nuestros barcos si no cumplimos con las regulaciones. Además de estas inspecciones, un sistema interno continuo así como también auditorías externas (independientes) de expertos nos ayudan a permanecer atentos, operar nuestros barcos con seguridad y mantener sistemas eficientes.")
+        print()
+        print("A continuación, encontrarás algunas de las preguntas sobre seguridad más frecuentes:")
+        
+        print()
+        print("¿Qué es un simulacro de emergencia?")
+        print("Un simulacro de emergencia es un ejercicio obligatorio que tiene el objetivo de familiarizar a todos los huéspedes y a la tripulación sobre la ubicación (lugar de reunión) donde se deben reunir en la improbable situación de una emergencia. Durante este simulacro, se presenta información de seguridad adicional (por ejemplo: instrucciones sobre cómo ponerse un chaleco salvavidas)")
+        print()
+        print("¿Deberían los huéspedes llevar sus chalecos salvavidas cuando participen en un simulacro de emergencia?")
+        print("	Los huéspedes no deberían usar chalecos salvavidas durante el simulacro de emergencia. Nuestros procedimientos ordenan a los huéspedes a dirigirse directamente a los lugares de reunión en el improbable caso de una situación de emergencia y al escuchar la señal de emergencia.  Esto reduce las posibilidades de tránsito cruzado y mejora el tiempo de respuesta en los lugares de reunión, ya que los huéspedes no necesitan regresar a sus camarotes para ir a buscar sus chalecos salvavidas si se encuentran en otro lugar del barco en ese momento.  Los miembros de la tripulación proveerán chalecos salvavidas a los huéspedes en los lugares de reunión. En el improbable caso de una emergencia, uno de los aspectos más importantes es responsabilizarse por todas las personas a bordo, y este proceso facilita esa responsabilidad")
+        print()
+        print("	¿Cuántos botes salvavidas tienen los barcos?")
+        print("El número de botes salvavidas varía en cada clase de barco.  Toda nuestra flota tiene suficientes embarcaciones de sobrevivencia a bordo, además de capacidad adicional de reserva, por requerimientos regulatorios.")
+        print()
+        ayuda(n,ape,d,nt)
+        menu()
+        
+        
+            
+    elif hp=="4":
+        print()
+        print()
+        print("¿COMO PODEMOS AYUDARLE?")
+        print()
+        print("Nuestra meta es darte el mejor servicio posible en todo nuestro quehacer. De esta manera, si no puedes encontrar la respuesta a una pregunta en nuestro sitio web y deseas hablar con un Especialista en cucero de Royal Caribbean o un Representante de Royal Caribbean en tu país, por el motivo que sea, tendremos mucho gusto en ayudarte.")
+        print("Para reservar tus vacaciones con crucero Internacional	+1 (305) 341-0204")
+        print()
+        print("NUEVO Horario de servicio:")
+        print("Lunes a Sábado de las 8:00 a las 20:00")
+        print("Domingo de las 9:00 a las 18:00")
+        print()
+        ayuda(n,ape,d,nt)
+        menu()
+
+    elif hp=="5":
+        menu()
+        op(n,ape,d,nt)
+    
+
