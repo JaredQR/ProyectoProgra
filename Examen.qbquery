@@ -1,0 +1,30 @@
+﻿create database prueba;
+use prueba;
+create table ciudad(
+nombre varchar(10) not null,
+poblacion int(6) not null);
+insert into ciudad values('lima',20000);
+insert into ciudad values('arequipa',10000);
+insert into ciudad values('tacna',8000);
+insert into ciudad values('piura',15000);
+select * from ciudad;
+update ciudad set nombre='cusco' where nombre='lima';
+update ciudad set poblacion=poblacion*1.10 where nombre='arequipa';
+create table alumnos(
+idalumno int(6) primary key,
+nombre varchar(20) not null,
+fecha date not null);
+select * from alumnos;
+insert into alumnos values(2,'juan','1996-12-05');
+insert into alumnos values(3,'jose','2001-15-23');
+insert into alumnos values(4,'raul','2001-10-23');
+select * from alumnos where fecha > '1995-12-23';
+select * from alumnos where month(fecha) = '10';
+select * from alumnos where fecha > '1995-12-23' and fecha < '2010-10-23';
+select * from alumnos where fecha between '1995-12-23' and '2010-10-23';
+select * from alumnos where idalumno in (2,5,3);
+select * from alumnos where nombre like 'juan';
+select * from alumnos where idalumno <> 2 and idalumno <> 4;
+select (concat(idalumno,' ',nombre)) as name from alumnos;
+select * from alumnos;
+delete from alumnos where idalumno = '3';
