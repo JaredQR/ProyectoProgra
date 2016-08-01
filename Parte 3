@@ -138,4 +138,23 @@ def modificar():
             
     
 menu()
+
+
+
+import time
+class Promociones:
+    def __init__(self, cruceros, destinos, puertos, barcos, paquetes):
+        self.cruceros = crucersos
+        self.destino = destino
+        self.puertos = puertos
+        self.barcos = barcos
+        self.paquetes = paquetes
+    def MostrarDatos (self):
+        print("Buscador de cruceros: ", self.cruceros)
+        print("Planeacion por destino: ", self.destino)
+        print("Planeacion por puertos: ", self.puertos)
+        print("Planeacion por barcos: ",self.barcos)
+        print("Paquetes: ", self.paquetes)
+    
+
         
