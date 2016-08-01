@@ -1,1 +1,44 @@
+import sys
+import os
+import sqlite3
 
+def menu():
+    os.system("cls")
+    print("      -------------------------------------")
+    print("     |  ROYALCARIBBEAN - INTERNATIOAL ®.   |")
+    print("      -------------------------------------")
+    print("")
+    print("   > MENU")
+    print("")
+    print("   -EL mundo de los crucerosa a tus servicios")
+    print("   -Escoge una de nuestras opciones de nuestro 'Menu' ")
+    print("")
+    print("\t[1]  |   Promociones")
+    print("\t[2]  |   Paquetes de viaje")
+    print("\t[3]  |   Contactanos")
+    print("\t[4]  |   Ayuda")
+    print("\t[5]  |   Administrador")
+    print("\t[6]  |   Salir")
+    print("")
+    while True:
+        try:
+            
+            o=int(input("Ingres la operacion que desea realizar: "))
+            break
+        except ValueError:
+            print("Ingrese una operacion valida .....")
+    if o==1:
+        promociones()
+    elif o==2:
+        paqueteviaje()
+    elif o==3:
+        contactanos()
+    elif o==4:
+        ayuda()
+    elif o==5:
+        administrador()
+    elif o==6:
+        salir()
+    else:
+        print("Ingrese una opcion segun nuestro Menu")
+        menu() 
