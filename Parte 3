@@ -1,16 +1,103 @@
-import time,os,sys
-os.system("clear")
+def administrador():
+    print("Bienvenidoa al administrador ustede puede configurar las promociones")
+    print("\t[1]   |    Agregar ")
+    print("\t[2]   |    Modificar")
+    print("\t[3]   |    Eliminar")
+    print("\t[4]   |    Ver")
+    print("")
+    print("")
+    while True:
+        try:
+            contra=int(input("Constraseña: "))
+            break
+        except ValueError:
+            print("Contraseña incorrecta...")
+            menu()
+    if contra==1234561:
+        agregar()
+    elif contra==1234562:
+        modificar()
+    elif contra==1234563:
+        eliminar()
+    elif contra==1234564:
+        ver()
+    else:
+        print("Contraseña incorrecta...")
+        menu()
 
-print("\t\t***********")
-print("\t\tPROMOCIONES")
-print("\t\t***********\n")
+def agregar():
+    import os,sys,sqlite3
+    con=sqlite3.connect('Registro.s3db')
+    print("Estas en el MENU>Administrador>Agregar")
+    print("")
+    puert=input("Ingrese el puerto de salida: ")
+    bord=input("Ingrese la embarcacione :")
+    os.system('cls')
+    cursor=con.cursor()
+    cursor.execute("insert into Promociones(Puerto_Salida,A_Bordo_de)values('"+puert+"','"+bord+"')")
+    con.commit()
+    con.close()
+    menu()
+def salir():
+    import os,sys
+    sal=input("Usted esta seguro que desea SALIR ?  [si]o[no] :")
+    if (sal=='si' or sal=='Si' or sal=='SI'):
+        print("")
+        print("Cerrando Sesion...")
 
-print("1.- BUSCADOR DE CRUCEROS ")
-print("2.- PLANEACION POR DESTINOS ")
-print("3.- PLANEACION POR PUERTOS")
-print("4.- PLANEACION POR BARCOS")
-print("5.- PAQUETES")
-
-o=input("Seleccione el tipo de opccion que desee realizar")
-
-while(o!=1 and o!=2 and o!=3 and o!=4 and o!=5):
+    elif (sal=='no' or sal=='No' or sal=='NO'):
+        menu()
+        salir()
+    else:
+        print("Ud debe tomar una decision ...")
+        salir()
+def ver():
+    import os,sys,sqlite3
+    con=sqlite3.connect('Registro.s3db')
+    cursor=con.cursor()
+    cursor.execute("select * from  Promociones")
+    print("Esta en el MENU > Administrador > Ver")
+    print("")
+    print("\tCod     \tPuerto_Salida   \tA_Bordo_de")
+    print("\t------------------------------------------------------")
+    for Promociones in cursor:
+        productos='\t'+str(Promociones[0])+'\t'+str(Promociones[1])+'\t'+str(Promociones[3])
+        print(str(productos))
+    con.close
+    print('')
+    menu()
+def modificar():
+    import os,sys,sqlite3
+    con=sqlite3.connect('Registro.s3db')
+    cursor=con.cursor()
+    cursor.execute("select * from  Promociones")
+    print("Esta en el MENU > Administrador > modificar")
+    print("")
+    print("\tCod     \tPuerto Salida   \tA Bordo de")
+    print("\t------------------------------------------------------")
+    for Promociones in cursor:
+        productos='\t'+str(Promociones[0])+'\t'+str(Promociones[1])+'\t'+str(Promociones[3])
+        print(str(productos))
+        print("")
+    cod=input("Digite el codigo del producto a modificar :")
+    for productos in Promociones:
+        if int(productos[0])==int(cod):
+            Puerto_Salida=productos[1]
+            A_Bordo_de=productos[2]
+            encontrado=True
+            break
+    Puerto_Salida=input("Digite el nombre nuevo"+Puerto_Salida+":")
+    A_Bordo_de=input("Digite el nombre nuevo"+A_Bordo_de+":")
+    sql="update productos set Puerto_Salida'"+Puerto_Salida+"','"+A_Bordo_de+"' where Cod="+cod
+    cursor.execute(sql)
+    con.commint()
+    con.close()
+    os.system("cls")
+    print("El producto a sido modificado!!!")
+    print("")
+    menu()
+        
+            
+    
+menu()
+        
