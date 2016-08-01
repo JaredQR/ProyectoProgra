@@ -163,3 +163,28 @@ def modificar():
     os.system("cls")
     input("Promocion Modificada")
     menu()
+
+def eliminar():
+    os.system("cls")
+    con=sqlite3.connect('ProgramaCrucero.s3db')
+    cursor=con.cursor()
+    cursor.execute("select * from  Paquetes")
+    for v in cursor:
+        print("barco:               ",v[1])
+        print("puertosalida:        ",v[2])
+        print("puertollegada:       ",v[3])
+        print("ruta:                ",v[4])
+        print("fecha:               ",v[5])
+        print("tiempo:              ",v[6])
+        print("servicios:           ",v[7])
+        print("precio:              ",v[8])
+        print("descuento:           ",v[9])
+        print("----------------------------\n")
+    codigo=input("Digite el codigo del campo que edesea eliminar...")
+    cursor.execute("delete from Paquetes where Cod='"+codigo+"'")
+    con.commit()
+    con.close()
+    input("Promocion Eliminada...")
+    menu()
+
+menu() 
