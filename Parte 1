@@ -42,3 +42,63 @@ def menu():
     else:
         print("Ingrese una opcion segun nuestro Menu")
         menu() 
+
+def promociones():
+    os.system("cls")
+    print("")
+    print("   > MENU   >  Administrador")
+    print("")
+    print("Bienvenidoa al administrador ustede puede configurar las promociones")
+    print("")
+    print("\t[1]   |    Ver")
+    print("\t[2]   |    Modificar")
+    print("\t[3]   |    Eliminar")
+    print("\t[4]   |    Agregar")
+    print("")
+    print("")
+    while True:
+        try:
+            opcion=int(input("Constraseña: "))
+            break
+        except ValueError:
+            print("Contraseña incorrecta...")
+            menu()
+    if opcion==1:
+        ver()
+    elif opcion==2:
+        modificar()
+    elif opcion==3:
+        eliminar()
+    elif opcion==4:
+        agregar()
+    else:
+        print("Contraseña incorrecta...")
+        menu()
+
+
+def ver():
+    os.system("cls")
+    print("")
+    print("    > MENU  > Ver Promociones")
+    print("")
+    print(" Promociones Ingresadas.")
+    print("")
+    con=sqlite3.connect('ProgramaCrucero.s3db')
+    cursor=con.cursor()
+    cursor.execute("select * from  Paquetes")
+    for v in cursor:
+        print("barco:                " ,v[1])
+        print("puertosalida:         " ,v[2])
+        print("puertollegada:        " ,v[3])
+        print("ruta:                 " ,v[4])
+        print("fecha:                " ,v[5])
+        print("tiempo:               " ,v[6])
+        print("servicios:            " ,v[7])
+        print("precio:               " ,v[8])
+        print("descuento:            " ,v[9])
+        print("")
+        print("----------------------------")
+        print("")
+    input("Presiones 'Enter' para volver al menu...")
+    con.close()
+    menu()
