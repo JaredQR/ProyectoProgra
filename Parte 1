@@ -186,5 +186,91 @@ def eliminar():
     con.close()
     input("Promocion Eliminada...")
     menu()
+def paqueteviaje():
+    os.system("cls")
+    print("")
+    print("   > MENU   >  Promociones ")
+    print("")
+    print("Promociones con 10% de descuento")
+    print("")
+    print("\t[1]   |    Ultimas Promociones")
+    print("\t[2]   |    Ayuda")
+    print("")
+    print("")
+    while True:
+        try:
+            opcion=int(input("Opcion: "))
+            break
+        except ValueError:
+            print("Opcion incorrecta...")
+            menu()
+    if opcion==1:
+        ver1()
+    elif opcion==2:
+        ayuda1()
+    else:
+        print("Opcion incorrecta...")
+        pregunta()
 
+#Promocioness----------------------------------------------------
+
+        
+def promociones():
+    os.system("cls")
+    print("")
+    print("   > MENU   >  Paquetes de viaje")
+    print("")
+    print("Paquetes de viaje que te ofrecemos")
+    print("")
+    print("\t[1]   |    Informacion de nuestros paquetes")
+    print("\t[2]   |    Ayuda")
+    print("")
+    print("")
+    while True:
+        try:
+            opcion=int(input("Opcion: "))
+            break
+        except ValueError:
+            print("Opcion incorrecta...")
+            menu()
+    if opcion==1:
+        ver1()
+    elif opcion==2:
+        ayuda2()
+    else:
+        print("Opcion incorrecta...")
+        pregunta()
+
+#BARCOS---------------------------------------------------
+        
+def  barcos():
+    os.system("cls")
+    print("")
+    print("   > MENU   >  Embarcaciones")
+    print("")
+    print("Paquetes de viaje que te ofrecemos")
+    print("")
+    print("\t[1]   |    Nuestras Embarciones ")
+    print("\t[2]   |    Ayuda")
+    print("")
+    print("")
+    while True:
+        try:
+            opcion=int(input("Opcion: "))
+            break
+        except ValueError:
+            print("Opcion incorrecta...")
+            menu()
+    if opcion==1:
+        ver3()
+    elif opcion==2:
+        ayuda3()
+    else:
+        print("Opcion incorrecta...")
+        pregunta()
+
+def ayuda3():
+    print("   Ayuda")
+    print("")
+    print("Nuestra
 menu() 
