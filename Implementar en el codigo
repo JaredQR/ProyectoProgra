@@ -2,20 +2,65 @@
 #Incrementar para que el programa sea lo mas real
 
 Parte 1
-1.-Diseña tu viaje
-  1.1.-Buscador de cruceros
-  1.2.-Destino
-  1.3.-Puerto
-  1.4.-Nuestra flota
-  1.5.-Camarotes
-  1.6.-Vida abordo
-  1.7.-Extiende tus vacaciones
-  1.8.-Servicio de transporte
-  
-2.-Barcos
-3.-Paquetes de viaje
-4.-Catalogos de Cruceros
-4.-Ofertas
-5.-Necesitas Ayuda
 
-Parte2
+1.- Check in (registro completo)
+	1. Registro para comprar 
+		Nonbre
+		- Apellido
+		- DNI
+		- Numero de telefono o celular
+		- correo (importante)
+		- Numero de reservacion (por defecto) 
+		- Fecha de nacimiento lugar
+		- Pasaporte y visa (en la mayoría de los casos necesitas un pasaporte vigente con un mínimo de seis meses al momento de viajar)
+		- Direccion teléfono de los viajeros
+		- Información de contacto en caso de emergencia (necesitarás dirección y teléfono)
+		- Tarjeta de crédito
+Parte 2
+
+2.- Diseño de viaje
+		-Buscador de cruceros 
+		-Planea por destinos   (defecto caribe)         
+		-Planea po Puertos
+		-Planea por barcos
+		-Paquetes 
+			Gastronomicos 
+			Bebidas
+			Romance
+			Fiesta
+			internet
+	(Informacion y precios de cada uno)
+
+Parte 3
+
+3.- Promociones
+		
+	(Las promociones deben ser por defecto por lo menos 5 tipos de promociones)
+
+		-Buscador de cruceros (3 tipos de cruceros en las promociones)
+		-Planea por destinos   (defecto caribe)         
+		-Planea po Puertos
+		-Planea por barcos
+		-Paquetes            
+			Gastronomicos 
+			Bebidas
+			Romance
+			Fiesta
+			internet
+	
+	(Las promociones deben ser por niveles)
+	(Informacion y precios de cada uno)
+
+Parte 4
+
+4.-Ayuda
+		- La ayuda debe ser en cada una de las partes como guias o tutoriales
+					
+
+Parte 5
+
+5.- MENU (se complementa con cada una de las partes )
+
+Parte 6
+
+6.-Base de Datos
