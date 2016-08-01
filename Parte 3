@@ -1,3 +1,41 @@
+import sys
+import os
+def menu():
+    print("")
+    print("\tMENU")
+    print("\t[1]  |   Diseña tu viaje")
+    print("\t[2]  |   Promociones")
+    print("\t[3]  |   Registrate")
+    print("\t[4]  |   Contactanos")
+    print("\t[5]  |   Ayuda")
+    print("\t[6]  |   Administrador")
+    print("\t[6]  |   Salir")
+    print("")
+    while True:
+        try:
+            o=int(input("Ingres la operacion que desea realizar: "))
+            break
+        except ValueError:
+            print("Ingrese una operacion valida .....")
+    if o==1:
+        diseñoviaje()
+    elif o==2:
+        promociones()
+    elif o==3:
+        registrate()
+    elif o==4:
+        contactanos()
+    elif o==5:
+        ayuda()
+    elif o==6:
+        administrador()
+    elif o==7:
+        salir()
+    else:
+        print("Ingrese una opcion segun nuestro Menu")
+        menu()
+        
+        
 def administrador():
     print("Bienvenidoa al administrador ustede puede configurar las promociones")
     print("\t[1]   |    Agregar ")
