@@ -121,7 +121,7 @@ def ayuda(n,ape,d,nt):
         print("Nuestra meta es darte el mejor servicio posible en todo nuestro quehacer. De esta manera, si no puedes encontrar la respuesta a una pregunta en nuestro sitio web y deseas hablar con un Especialista en cucero de Royal Caribbean o un Representante de Royal Caribbean en tu país, por el motivo que sea, tendremos mucho gusto en ayudarte.")
         print("Para reservar tus vacaciones con crucero Internacional	+1 (305) 341-0204")
         print()
-        print("NUEVO Horario de servicio:")
+        print("Horario de Atencion:")
         print("Lunes a Sábado de las 8:00 a las 20:00")
         print("Domingo de las 9:00 a las 18:00")
         print()
