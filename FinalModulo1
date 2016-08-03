@@ -22,3 +22,30 @@ def menuprincipal():
     print("\t[10] |     Salir del programa.")
     print("")
     t=input("\n\tIngrese la opcion que desee: ")
+    if t=="1":
+        
+        paginaprincipal()
+    if t=="2":
+        
+        menureser()
+    elif t=="3":
+        
+        porque()
+    elif t=="4":
+        
+        embarcacion()
+    elif t=="5":
+        
+        promociones()
+    elif t=="6":
+        
+        abordo()
+    elif t=="7":
+        
+        configuracion()
+    elif t=="8":
+        
+        salir()
+    else:
+        print("Ingrese un valor correcto")
+        menuprincipal()
