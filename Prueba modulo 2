@@ -371,3 +371,38 @@ while(opcionDeUsuario == 1):
 	print "1. Ingresar Tarjeta"
 	print "2. Salir"
 	opcionDeUsuario = input("Que desea hacer? digite 1 o 2: ")
+	# LOGIN USUARIO
+ci = 1234
+paswd = "1234"
+def Login():
+    sesion = 3
+    print time.ctime()
+    print "\n\n\n"
+    print "                         Bienvenido - Welcome\n"
+    print "                      =========================="
+    print "                       CAJERO AUTOMATICO ROBANK"
+    print "                      ==========================\n\n"
+    print "                  Ingrese su Rut sin puntos ni guión\n\n\n"
+    while (sesion > 0):
+        rut = input("Rut: ")
+        clave = getpass.getpass("Clave: ")
+        if rut == ci and paswd == clave:
+            os.system("clear")#Limpia la pantalla
+            print "                        --------------------------"
+            print "                        |*** Ingreso Correcto ***|"
+            print "                        --------------------------\n"
+            print Menu1()       
+        else:
+            os.system("clear")#Limpia la pantalla
+            sesion -= 1
+            print "\n\n\n"
+            print "                         Bienvenido - Welcome\n"
+            print "                      =========================="
+            print "                       CAJERO AUTOMATICO ROBANK"
+            print "                      ==========================\n\n"
+            print "             Usuario o Clave incorrecta, vuelva a intentarlo\n"
+            print "                        Le quedan ",sesion, "intentos\n"
+            if sesion == 0:
+                print "Su clave ha sido bloqueda\n"
+                print "Contacte a su ejecutivo"
+print Login()
