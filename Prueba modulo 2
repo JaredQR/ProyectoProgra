@@ -406,3 +406,256 @@ def Login():
                 print "Su clave ha sido bloqueda\n"
                 print "Contacte a su ejecutivo"
 print Login()
+# MENU1
+def Menu1():
+    print "\n\n\n"
+    print "                   |*** SELECCIONE TIPO DE CUENTA ***|\n"
+    print "                        [ 1 ] Cuenta Rut"
+    print "                        [ 2 ] Cuenta Corriente"
+    print "                        [ 3 ] Cuenta Vista"
+    print "                        [ 4 ] Salir\n\n"
+    opcioncuenta = raw_input("Ingrese Opción: ")
+    if opcioncuenta == "1":
+        os.system("clear")#Limpia la pantalla
+        print CuentaRut()
+    elif opcioncuenta == "2":
+        os.system("clear")#Limpia la pantalla
+        print CuentaCorriente()
+    elif opcioncuenta == "3":
+        os.system("clear")#Limpia la pantalla
+        print CuentaVista()
+    elif opcioncuenta == "4":
+        os.system("clear")#Limpia la pantalla
+        print Salir()
+    else:
+        os.system("clear")#Limpia la pantalla
+        print "\n\n"
+        print "                             Error de Opción"
+        print Menu1()
+La tercera función corresponde al menú de salida, que contempla la confirmación de la salida para volver al menú de entrada saliendo del programa con un tiempo de espera de 5 segundos o la opción de volver al menú principal sin salir del programa.
+# SALIR
+respsalir = ""
+respsalir2 = ""
+def Salir():
+    print "\n\n\n"
+    respsalir = raw_input("                Si desea Salir seleccione opcion (s/n): \n")
+    if respsalir == "s":
+        print "                   Está seguro que desea salir (s/n)?"
+        respsalir2 = raw_input()
+        if respsalir2 == "s":
+            os.system("clear")#Limpia la pantalla
+            print "\n\n\n"
+            print "                         Su Sesión ha finalizado\n"
+            print "                     Gracias por Operar Con Nosotros\n"
+            print "                         CAJERO AUTOMATICO ROBANK\n\n"
+            time.sleep(5)
+            os.system("clear")#Limpia la pantalla
+            print Login()
+        elif respsalir2 == "n":
+            os.system("clear")#Limpia la pantalla
+            print Menu1()
+        else:
+            os.system("clear")#Limpia la pantalla
+            print "\n\n"
+            print "                             Error de Opción"
+            print Menu1()
+    elif respsalir == "n":
+        os.system("clear")#Limpia la pantalla
+        print Menu1()
+    else:
+        os.system("clear")#Limpia la pantalla
+        print "\n\n"
+        print "                             Error de Opción"
+        print Menu1()
+La cuarta, quinta y sexta función corresponden a las cuentas del banco (Rut, Corriente y Vista) Básicamente estas tres contienen los mismos parámetros que contemplan 5 opciones cada una (giro, depósito, transferencia, saldo y volver al menú principal) solamente cambiando de nombre por cada cuenta asociada.
+# CUENTA RUT -----------------------------------------------------------
+op1ctarut = ""    #Opciones Cuenta
+resp1ctarut = ""  #Respuesta Giro/Deposito/Transferencia
+resp2ctarut = ""  #Respuesta Otra Operación
+resp3ctarut = ""  #Respuesta Saldo
+optranctarut = "" #Opcion de Transferencia
+
+def CuentaRut():
+    global totalrut, totalcorriente, totalvista
+    print "\n"
+    print "                .............."
+    print "                | Cuenta Rut |"
+    print "                ..............\n\n"
+    print "        [ 1 ] Giro              [ 2 ] Deposito\n"
+    print "        [ 3 ] Transferencia     [ 4 ] Saldo\n"
+    print "        [ 5 ] Menu Principal    [ 6 ] Salir\n\n"
+    op1ctarut = raw_input("            Ingrese Opcion: ")
+# Giro Cuenta Rut ------------------------------------------------------
+    if op1ctarut == "1":
+        os.system("clear")#Limpia la pantalla
+        print "\n\n"
+        print "                .............."
+        print "                | Cuenta Rut |\n"
+        print "                |    Giro    |"
+        print "                ..............\n"
+        girorut = input("         Ingrese Monto a Girar: ")
+        print "\n"
+        print "         Esta seguro de realizar el Giro por este monto $",girorut
+        print "\n"
+        resp1ctarut = raw_input("                s/n: ")
+        if resp1ctarut == "s":
+            totalrut = totalrut - girorut
+            os.system("clear")#Limpia la pantalla
+            print "\n"
+            print "                .............."
+            print "                | Cuenta Rut |"
+            print "                ..............\n\n"
+            print "                 Su transacción se ha realizado con exito\n"
+            print "                     ¿Desea realizar otra operación?\n"
+            resp2ctarut = raw_input("                s/n: ")
+            if resp2ctarut == "s":
+                os.system("clear")#Limpia la pantalla
+                print CuentaRut()
+            elif resp2ctarut == "n":
+                os.system("clear")#Limpia la pantalla
+                print Salir()
+            else:
+                os.system("clear")#Limpia la pantalla
+                print "\n\n"
+                print "                             Error de Opción"
+                print Menu1()
+        elif resp1ctarut == "n":
+            os.system("clear")#Limpia la pantalla
+            print CuentaRut()
+        else:
+            os.system("clear")#Limpia la pantalla
+            print "\n\n"
+            print "                             Error de Opción"
+            print Menu1()
+# Deposito Cuenta Rut --------------------------------------------------
+    elif op1ctarut == "2":
+        os.system("clear")#Limpia la pantalla
+        print "\n\n"
+        print "                .............."
+        print "                | Cuenta Rut |\n"
+        print "                |  Deposito  |"
+        print "                ..............\n"
+        deporut = input("         Ingrese Monto a Depositar: ")
+        print "\n"
+        print "         Esta seguro de realizar el Deposito por este monto $",deporut
+        print "\n"
+        resp1ctarut = raw_input("                s/n: ")
+        if resp1ctarut == "s":
+            totalrut = totalrut + deporut
+            os.system("clear")#Limpia la pantalla
+            print "\n"
+            print "                .............."
+            print "                | Cuenta Rut |"
+            print "                ..............\n\n"
+            print "                 Su transacción se ha realizado con exito\n"
+            print "                     ¿Desea realizar otra operación?\n"
+            resp2ctarut = raw_input("                s/n: ")
+            if resp2ctarut == "s":
+                os.system("clear")#Limpia la pantalla
+                print CuentaRut()
+            elif resp2ctarut == "n":
+                os.system("clear")#Limpia la pantalla
+                print Salir()
+            else:
+                os.system("clear")#Limpia la pantalla
+                print "\n\n"
+                print "                             Error de Opción"
+                print Menu1()
+        elif resp1ctarut == "n":
+                os.system("clear")#Limpia la pantalla
+                print CuentaRut()
+        else:
+            os.system("clear")#Limpia la pantalla
+            print "\n\n"
+            print "                             Error de Opción"
+            print Menu1()
+# Tranferencia Cuenta Rut ----------------------------------------------
+    if op1ctarut == "3":
+        os.system("clear")#Limpia la pantalla
+        print "\n\n"
+        print "                          ................."
+        print "                          |   Cuenta Rut  |\n"
+        print "                          | Transferencia |"
+        print "                          .................\n"
+        tranrut = int(input("         Ingrese Monto a Transferir: "))
+        print "\n"
+        print "                   ¿A que cuenta desea transferir?\n"
+        print "             [ 1 ] Cuenta Corriente     [ 2 ] Cuenta Vista\n"
+        optranctarut = raw_input("             Ingrese Opción: ")
+        print "\n"
+        print "         Esta seguro de realizar la Transferencia por este monto $",tranrut
+        print "\n"
+        resp1ctarut = raw_input("                s/n: ")
+        if resp1ctarut == "s":
+            if optranctarut == "1":
+                totalrut = totalrut - tranrut
+                totalcorriente = totalcorriente + tranrut
+                os.system("clear")#Limpia la pantalla
+                print "\n"
+                print "                .............."
+                print "                | Cuenta Rut |"
+                print "                ..............\n\n"
+                print "                 Su transacción se ha realizado con exito\n"
+                print "                     ¿Desea realizar otra operación?\n"
+                resp2ctarut = raw_input("                s/n: ")
+                if resp2ctarut == "s":
+                    os.system("clear")#Limpia la pantalla
+                    print CuentaRut()
+                elif resp2ctarut == "n":
+                    os.system("clear")#Limpia la pantalla
+                    print Salir()
+            elif optranctarut == "2":
+                totalrut = totalrut - tranrut
+                totalvista = totalvista + tranrut
+                os.system("clear")#Limpia la pantalla
+                print "\n"
+                print "                .............."
+                print "                | Cuenta Rut |"
+                print "                ..............\n\n"
+                print "                 Su transacción se ha realizado con exito\n"
+                print "                     ¿Desea realizar otra operación?\n"
+                resp2ctarut = raw_input("                s/n: ")
+                if resp2ctarut == "s":
+                    os.system("clear")#Limpia la pantalla
+                    print CuentaRut()
+                elif resp2ctarut == "n":
+                    os.system("clear")#Limpia la pantalla
+                    print Salir()
+            else:
+                os.system("clear")#Limpia la pantalla
+                print "\n\n"
+                print "                             Error de Opción"
+                print CuentaRut()    
+# Saldo Cuenta Rut -----------------------------------------------------
+    elif op1ctarut == "4":
+        os.system("clear")#Limpia la pantalla
+        print "\n\n"
+        print "            .............."
+        print "            | Cuenta Rut |\n"
+        print "            |    Saldo   |"
+        print "            ..............\n"
+        print "                       Su Saldo es :",totalrut
+        print "\n"
+        resp3ctarut = raw_input("            [ 1 ] Volver Atras [ 2 ] Salir: ")
+        if resp3ctarut == "1":
+            os.system("clear")#Limpia la pantalla
+            print CuentaRut()
+        elif resp3ctarut == "2":
+            os.system("clear")#Limpia la pantalla
+            print Salir()
+        else:
+            os.system("clear")#Limpia la pantalla
+            print "\n\n"
+            print "                             Error de Opción"
+            print Menu1()
+    elif op1ctarut == "5":
+        os.system("clear")#Limpia la pantalla
+        print Menu1()
+    elif op1ctarut == "6":
+        os.system("clear")#Limpia la pantalla
+        print Salir()
+     else:
+        os.system("clear")#Limpia la pantalla
+        print "\n\n"
+        print "                             Error de Opción"
+        print Menu1()
