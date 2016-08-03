@@ -1,0 +1,1135 @@
+import os
+import sys
+import time
+import sqlite3
+
+def menuprincipal():
+    os.system("cls")   
+    print("      -------------------------------------")
+    print("     |  ROYALCARIBBEAN - INTERNATIOAL ®.   |")
+    print("      -------------------------------------")
+    print("")
+    print("\t[1]  |     Pagina Principal.")
+    print("\t[2]  |     Reservaciones.")
+    print("\t[3]  |     Por que ROYALCARIBBEAN-INTERNATIONAL ®.")
+    print("\t[4]  |     Embarcaciones")
+    print("\t[5]  |     Promociones.")
+    print("\t[6]  |     A Bordo")
+    print("\t[7]  |     Configuracion")
+    print("\t[8]  |     Salir del programa.")
+    print("")
+    t=input("\n\tIngrese la opcion que desee: ")
+    if t=="1":        
+        paginaprincipal()
+    if t=="2":        
+        menureser()
+    elif t=="3":        
+        porque()
+    elif t=="4":        
+        embarcacion()
+    elif t=="5":        
+        promociones()
+    elif t=="6":        
+        abordo()
+    elif t=="7":        
+        configuracion()
+    elif t=="8":        
+        salir()
+    else:
+        print("Ingrese un valor correcto")
+        menuprincipal()
+
+def paginaprincipal():
+    os.system("cls")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    print("   Las íntimas embarcaciones de lujo de Silversea")
+    print("   fueron diseñadas para aquellos que se deleitan con")
+    print("   la emoción del descubrimiento mientras miman ")
+    print("   cuerpo y mente en los entornos más espléndidos e")
+    print("   imaginables. Todos los barcos constan de suites amplias")
+    print("   con vistas al mar,  servicio de mayordomo ")
+    print("   y la mayoría de ellas cuentan con balcón privado.")
+    print("   Los viajes y expediciones de Silversea zarpan a más")
+    print("   de 800 destinos en los siete continentes, más que ")
+    print("   cualquier otra línea de cruceros. Nuestros barcos")
+    print("   íntimos de lujo pueden navegar por estrechas vías hasta")
+    print("   el centro de una ciudad, o echar marras en el ")
+    print("   muelle cuando otros deben anclar lejos de la costa.")
+    print("   Y Silversea Expeditions puede transportar a aquellos")
+    print("   que desean explorar lugares nuevos y ")
+    print("   desconocidos a las fronteras más lejanas del planeta.")
+    print("   Famosos por su excelencia culinaria y su espíritu")
+    print("   innovador, los cruceros de lujo de Silversea ")
+    print("   ofrecen cenas con libre elección de asiento en toda")
+    print("   la flota, así como varios lugares de especialidades")
+    print("   a bordo de los barcos de no expedición. Disfrute de ")
+    print("   la facilidad, comodidad y las ventajas de una tarifa")
+    print("   de crucero todo incluido que incluye casi todos los")
+    print("   gastos discrecionales a bordo.")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def promociones():
+    os.system("cls")
+    print("")
+    print("\tPROMOCIONES")
+    print("")
+    print("Nuestras Promociones validas hasta la ultima semana de nomviembre")
+    print("")
+    print("\tPromocion Hasta un 20% ")
+    print("")
+    print("   Nuestra Promociones es valida si usted usa")
+    print("   su tarjeta Gold Global")
+    print("   No aplicable a los impuestos")
+    print("")
+    print("   Valido en las Embarcaciones")
+    print("           EMBARCACION SILVER - MUSE ")
+    print("           EMBARCACION SILVER - CLOUD ")
+    print("   Valido en todos nuestros Paquetes")
+    print("           Paquete Premiun")
+    print("           Paquete Silver")
+    print("           Paquete Royalcaribbean")
+    print("   Valido en todas las modalidades")
+    print("           Familiar 3 Personas")
+    print("           Familiar 4 Personas")
+    print("           Familiar 5 Personas")
+    print("           Familiar 6 Personas")
+    print("           Pareja 2 Personas")
+    print("           Pareja Ederly 2 Personas")
+    print("           Alone 1 Persona")
+    print("")
+    print("")
+    print("\tPromocion Hasta un 30% si reserva su pasaje en todo AGOSTO")
+    print("")
+    print("   Nuestra Promociones es valida si usted usa")
+    print("   su tarjeta Gold Global")
+    print("   No aplicable a los impuestos")
+    print("")
+    print("   Valido en las Embarcaciones")
+    print("           EMBARCACION SILVER - DISCOVER  ")
+    print("           EMBARCACION SILVER - WIND") 
+    print("           EMBARCACION SILVER - CLOUD ")
+    print("   Valido en todos nuestros Paquetes")
+    print("           Paquete Premiun")
+    print("           Paquete Royalcaribbean")
+    print("   Valido en todas las modalidades")
+    print("           Familiar 3 Personas")
+    print("           Familiar 4 Personas")
+    print("           Familiar 5 Personas")
+    print("           Familiar 6 Personas")
+    print("           Pareja 2 Personas")
+    print("           Pareja Ederly 2 Personas")
+    print("           Alone 1 Persona")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def embarcacion():
+    print("")
+    os.system("cls")   
+    print("")
+    print("   NUESTRAS EMBARCACIONES")
+    print("")
+    print("\t[1]   |     EMBARCACION SILVER - MUSE      (Disponible) ")
+    print("\t[2]   |     EMBARCACION SILVER - CLOUD     (Disponible)")
+    print("\t[3]   |     EMBARCACION SILVER - WIND      (Disponible)")
+    print("\t[4]   |     EMBARCACION SILVER - DISCOVER  (Disponible)")
+    print("\t[5]   |     EMBARCACION SILVER - SHADOW    (Mantenimiento)")
+    print("\t[6]   |     EMBARCACION SILVER - WHISPER   (Navegando)")
+    print("\t[7]   |     EMBARCACION SILVER - SPIRIT    (Navegando)")
+    print("")
+    t=input("\n\tIngrese la opcion que desee: ")
+    print("")
+    if t=="1":
+        muse()
+    if t=="2":
+        cloud()
+    elif t=="3":
+        wind()
+    elif t=="4":
+        discover()
+    elif t=="5":
+        shadow()
+    elif t=="6":
+          whisper()
+    elif t=="7":
+          spirit()
+    else:
+          print("Ingrese una opcion valida, intente de nuevo porfavor...")
+          embarcacion()
+          print("")
+          
+def muse():
+    os.system("cls")
+    print("")
+    print("\tEMBARCACION SILVER - MUSE ")
+    print("")
+    print("   Silversea Cruises se complace en anunciar que nuestro nuevo")
+    print("   barco insignia, Silver Muse,será remodelado a comienzos de 2017. ")
+    print("   Este flamante y super lujoso barco de 40.700 unidades GT,")
+    print("   cuya construcción corre a cargo de Fincantieri, tendrá")
+    print("   capacidad para 596 pasajeros y se presentará como una ")
+    print("   fantástica evolución de Silver Spirit que redefinirá los")
+    print("   parámetros de los cruceros de lujo haciendo hincapié en el sello")
+    print("   distintivo de la experiencia Silversea: intimidad propia")
+    print("   de un barco pequeño y alojamiento en amplias suites.")
+    print("")
+    print("")
+    print("   HUSPEDES     |    596")
+    print("")
+    print("   Tripulacion  |    411")
+    print("")
+    print("   Construccion |    2013")
+    print("")
+    print("   Tonelaje     |    40 700 toneladas")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+          
+    
+def cloud():
+    os.system("cls")
+    print("")
+    print("\tEMBARCACION SILVER - CLOUD")
+    print("")
+    print("   Espacioso pero íntimo, diseñadas para cruzar océanos y ")
+    print("   aun así capaces de deslizarse ríos arriba y a escondidos ")
+    print("   puertos con facilidad, la embarcación estilo yate Silver Cloud")
+    print("   transportan a solo 296 huéspedes en un estilo y confort")
+    print("   incomparables. Combinando amplias suites con vistas al océano")
+    print("   y terraza privada con impresionantes opciones gastronómicas y de")
+    print("   marítimo y personifica la visión de Silversea en cuanto ")
+    print("   categoría. Únase a nosotros y sientase como en casa, le daremos")
+    print("   a una calurosa bienvenida partes que el mundo desee llevarle")
+    print("")
+    print("")
+    print("")
+    print("   HUSPEDES     |    296")
+    print("")
+    print("   Tripulacion  |    22")
+    print("")
+    print("   Construccion |    2012")
+    print("")
+    print("   Tonelaje     |    16 800 toneladas")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def wind():
+    os.system("cls")
+    print("")
+    print("\tEMBARCACION SILVER - WIND ")
+    print("")
+    print("   Comidas al aire libre con vistas panorámicas al océano ")
+    print("   Agradables espacios de ocio nocturnos para disfrutar ")
+    print("   de cócteles con los amigos. La lujosa comodidad de su suite con")
+    print("   vistas al mar después de un día de vistas increíbles.")
+    print("   Bienvenido al hogar en el crucero de lujo Silver Wind.")
+    print("   El elegante barco hermano de Silver Cloud, eternamente")
+    print("   elegante y lujosamente tranquilo, cuenta con el ")
+    print("   equilibrio perfecto entre la intimidad de un yate y el espacio y las ")
+    print("   comodidades que suelen estar reservadas")
+    print("   para barcos más grandes.")
+    print("")
+    print("")
+    print("   HUSPEDES     |    296")
+    print("")
+    print("   Tripulacion  |    22")
+    print("")
+    print("   Construccion |    2013")
+    print("")
+    print("   Tonelaje     |    17 400")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def discover():
+    os.system("cls")
+    print("")
+    print("\tEMBARCACION SILVER - DISCOVER ")
+    print("")
+    print("   El fiel público de viajeros aventureros de Silversea ya")
+    print("   puede explorar los remotos archipiélagos del vasto")
+    print("   Pacífico a bordo del elegante crucero Silver Discoverer")
+    print("   para 120 huéspedes. Es la plataforma perfecta ")
+    print("   para contemplar estos indómitos paisajes, con todas las")
+    print("   de modo que el salto de una ballena o una manada de delfines")
+    print("   le permite navegar más cerca de la costa, y con una flota ")
+    print("   de 12 zódiacs y un barco con el suelo de cristal")
+    print("   los huéspedes podrán aterrizar en remotas costas y ")
+    print("   explorar los pantanos y ecosistemas sumergidos en profundidad.")
+    print("")
+    print("")
+    print("   HUSPEDES     |    120")
+    print("")
+    print("   Tripulacion  |    96")
+    print("")
+    print("   Construccion |    2014")
+    print("")
+    print("   Tonelaje     |    5 218")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def whisper():
+    os.system("cls")
+    print("")
+    print("\tEMBARCACION SILVER - WHISPER  ")
+    print("")
+    print("   Las comodidades de un gran resort. El encanto de un pequeño ")
+    print("   hotel con estilo. El barco de categoría Millennium Silver Whisper ")
+    print("   y su barco hermano Silver Shadow le invitan a disfrutar del")
+    print("   alojamiento de primera categoría de Silversea, así como de su")
+    print("   cordialidad y calidez a bordo del barco y del servicio")
+    print("   individualizado, junto con las comodidades y espacios")
+    print("   mejorados de un barco más amplio ")
+    print("")
+    print("   HUSPEDES     |    382")
+    print("")
+    print("   Tripulacion  |    302")
+    print("")
+    print("   Construccion |    2010")
+    print("")
+    print("   Tonelaje     |    28 258")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def spirit():
+    os.system("cls")
+    print("")
+    print("\tEMBARCACION SILVER - SPIRIT  ")
+    print("")
+    print("   Silver Spirit combina el premiado sello de los cruceros de ")
+    print("   lujo Silversea con instalaciones ampliadas y elegantes nuevos ")
+    print("   restaurantes para cenar y entretenerse. Cene sushi fresco en la")
+    print("   innovadora cocina de fusión asiática en el Seishin; quede")
+    print("   con los amigos en el Stars Supper Club para especialidades")
+    print("   servidas en pequeños platos y entretenimiento en vivo")
+    print("   o recargue las pilas y rejuvenezca en el spa y gimnasio ")
+    print("   de 770 m2 de Silver Spirit. Presentando las suites más")
+    print("   amplias de la flota Silversea, Silver Spirit ofrece una")
+    print("   atmósfera elegante y cordial para los viajeros")
+    print("   cosmopolitas que disfrutan con una gran gran variedad")
+    print("   de diversiones a bordo del barco. Más variedad")
+    print("   para jugar... y relajarse... Silver Spirit.")
+    print("")
+    print("   HUSPEDES     |    540")
+    print("")
+    print("   Tripulacion  |    376")
+    print("")
+    print("   Construccion |    2019")
+    print("")
+    print("   Tonelaje     |    36 000")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def salir():
+    sal=input("Realmente deseas salir SI/NO: ")
+    if sal=="Si" or sal=="SI" or sal=="si":
+        sys.exit(5)
+    elif sal=="NO" or sal=="no" or sal=="No":
+        menuprincipal()
+    else:
+        print("Ingrese  SI/NO porfavor")
+        salir()
+def op():
+    print("")
+    s1=input("Deseas regresar al menú principal SI/NO: ")
+    if s1=="Si" or s1=="SI" or s1=="si":
+        menuprincipal()
+    elif s1=="NO" or s1=="no" or s1=="No":
+        salir()
+    else:
+        print("")
+        print("Ingrese  SI/NO porfavor")
+        op()
+
+def abordo():
+    print("")
+    os.system("cls")  
+    print("\tA BORDO")   
+    print("")
+    print("   NUESTRO SERVICIO")
+    print("")
+    print("\t[1]   |     Servicio Personalizado ")
+    print("\t[2]   |     Todo inlcuido")
+    print("\t[3]   |     Alojamiento")
+    print("\t[4]   |     Gastronomia esquista")
+    print("\t[5]   |     Bienestar")
+    print("\t[6]   |     Enrequicimiento")
+    print("")
+    t=input("\n\tIngrese la opcion que desee: ")
+    print("")
+    if t=="1":
+        servicioper()
+    if t=="2":
+        todoinclui()
+    elif t=="3":
+        alojami()
+    elif t=="4":
+        gastro()
+    elif t=="5":
+        bienestar()
+    elif t=="6":
+        enrequicimiento()
+    else:
+          print("Ingrese una opcion valida, intente de nuevo porfavor...")
+          embarcacion()
+          print("")
+          
+def servicioper():
+    print("")
+    os.system("cls")
+    print("")
+    print("\tSERVICIO PERSONALIZADO")
+    print("")
+    print("   Entre rapidamente por la puerta de embarque y sera")
+    print("   recibido con la calida acogida de un personal de guantes")
+    print("   blancos. Disfrute de una copa de champan mientras le")
+    print("   acompañamos a su cuarto, permitanos mimarle con unas ")
+    print("   flores frescas u nuestras atencion exclusiva")
+    print("   es la calidad de nuestro servicio lo que nos diferencia")
+    print("   y emana una fantastica sencacion de bienestar desde")
+    print("   el momento en que se sube abordo de un crucero de lujo")
+    print("   de RoyalCaribeaan tomando conciencia de que toasd sus")
+    print("   necesidades vasn a ser cubiertas incluso antes de lo ")
+    print("   que lo solicite.Nuestro realacion de personal huespedes")
+    print("   es casi de uno a uno y eso la garantiza que todos")
+    print("   sus deseos se puedan cumplir con mayor presicion ")
+    print("   desde el concierge que personaliza su viaje el")
+    print("   mayordomo de le sirve el desayuno a la suite")
+    print("")
+    print("   Por supuesto los numeros solo cuentan parte de la ")
+    print("   historia, fomrados en las escuelas hoteleras lideres")
+    print("   en su campo el personal de RoyalCaribeaan no solo son")
+    print("   expertos en lo que hace sino que ademas les gusta")
+    print("   hacerlo su acogida es calida sus sonrisas genuinas")
+    print("   desde los camareros y gerentes de los restauranes")
+    print("   hasta el chef que presenta su souffle favorito")
+    print("   preparando al minute y a todos y a cada uno de los")
+    print("   especialmente se introducen con tal estilo y delicadeza")
+    print("   que se sentiran rapidamente como el miennbro preferido")
+    print("   del club mas exclusivo del mundo de echo como el huesped")
+    print("   privilegiado que sin duda es.")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def todoinclui():
+    print("")
+    os.system("cls")
+    print("")
+    print("\tTODO INCLUIDO")
+    print("")
+    print("   ¿Servicio de habitaciones? Sí. ")
+    print("   ¿Exquisitos vinos y supremos licores? Por supuesto")
+    print("   ¿Propinas? A su disposicion")
+    print("   Estos son los extras que realmente pueden marcas la ")
+    print("   diferencia con un crucero ordinario")
+    print("   Pues cuando zarpe con un crucero de lujo Royal Caribeaan")
+    print("   sus gastos extras son minimos de veras")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def alojami():
+    print("")
+    os.system("cls")
+    print("\tAlojamiento")
+    print("")
+    print("   Las suites de Silversea ofrecen uno de los espacios ")
+    print("   más amplios por huésped que no encontrará en ningún")
+    print("   otro alojamiento de cruceros de lujo. Todas")
+    print("   nuestras suites poseen vista al océano, y una gran")
+    print("   cantidad presenta terraza privada. Independientemente ")
+    print("   del barco o de la suite, a todos los huéspedes se les")
+    print("   mimará con los servicios personalizado de un")
+    print("   atento mayordomo, navegando elegantemente a bordo de la")
+    print("   mejor línea de cruceros en viajes de lujo.")
+    print("   ")
+    print("   Para una auténtica experiencia personal, adapte")
+    print("   su suite a su estilo con abundantes servicios")
+    print("   opcionales. Desde artículos de aseo personal y suministros")
+    print("   propios hasta un bar con sus vinos y licores")
+    print("   preferidos, ofrecemos solo las comodidades más exquisitas en")
+    print("   alojamiento en cruceros de lujo. Incluso podrá")
+    print("   disfrutar de la cena en la suite servida por su mayordomo,")
+    print("   y elegir entre nuevo tipos diferentes de almohada.")
+    print("   Lo definitivo en alojamiento de cruceros de lujo")
+    print("   las suites de Silversea son su hogar lejos de su hogar.")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def gastro():
+    print("")
+    os.system("cls")
+    print("\tGASTRONOMIA")
+    print("")
+    print("   Teniendo en cuenta la importancia que se da a la gastronomía")
+    print("   en la cultura italiana, es de esperar que la comida sea")
+    print("   una prioridad para Silversea. Y está más que asegurado. Por ")
+    print("   otra parte, la excelencia gastronómica es un hecho")
+    print("   gracias a nuestra colaboración con los prestigiosos")
+    print("   Grands Chefs de Relais & Châteaux.")
+    print("   ")
+    print("   Sea cual sea su elección para el almuerzo o la")
+    print("   cena, su influencia se evidencia en la gran ")
+    print("   diversidad y en la frescura de sus selecciones. ")
+    print("   Y cada barco cuenta con una gran variedad ")
+    print("   de espacios. El comedor principal, The Restaurant")
+    print("   está siempre abierto para que pueda ir a almorzar")
+    print("   o a cenar cuando lo desee y es el lugar idóneo")
+    print("   para improvisar comidas o cenas con nuevos amigos.")
+    print("   Al fin y al cabo, gracias a la gran diversidad de viajeros")
+    print("   internacionales, la socialización es una de las cosas ")
+    print("   que más gusta a los pasajeros de ")
+    print("   nuestros cruceros de lujo.")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def bienestar():
+    print("")
+    os.system("cls")
+    print("\tBIENESTAR")
+    print("")
+    print("   Durante su estancia en el crucero de lujo, tiene")
+    print("   la oportunidad de embarcarse en un viaje personal de salud")
+    print("   para complementar sus aventuras diarias. Anímese a hacer ")
+    print("   ejercicio en el equipado gimnasio, a tomar una")
+    print("   clase de entrenamiento en circuito o de pilates en la sala")
+    print("   de aeróbic, y deje que la sauna y los baños de vapor")
+    print("   ejerzan su magia sobre todos los músculos de su cuerpo.")
+    print("   ")
+    print("   Silversea ofrece seminarios que van desde la aromaterapia")
+    print("   y la nutrición hasta cómo quemar grasa. Un enfoque")
+    print("   holístico del bienestar que integra de forma armónica el ")
+    print("   ejercicio, el fitness y las terapias de spa con")
+    print("   conferencias de salud y nutrición para ayudarle ")
+    print("   a mantener un estilo de vida saludable, incluso")
+    print("   cuando está lejos de casa.")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def enrequicimiento():
+    print("")
+    os.system("cls")
+    print("\tENREQUISIMIENTO")
+    print("")
+    print("   Una inmersión en el conocimiento")
+    print("   ")
+    print("   Descubra las maravillas más allá de lo típico –tanto")
+    print("   en tierra como a bordo– con nuestro programa Silver")
+    print("   Estimule su curiosidad con charlas a cargo del equipo")
+    print("   de expedición altamente calificado y de los ponentes")
+    print("   invitados a bordo de los cruceros. Seleccione las ")
+    print("   actividades en tierra junto a nuestros consultores en destino")
+    print("   Participe en un epicúreo programa interactivo")
+    print("   a bordo de nuestros cruceros gastronómicos y")
+    print("   enológicos. O compita en partidas de bridge.")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+
+def porque():
+    os.system("cls")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    print("   Todos los barcos constan de suites amplias")
+    print("   con vistas al mar,  servicio de mayordomo ")
+    print("   y la mayoría de ellas cuentan con balcón privado.")
+    print("   Los viajes y expediciones de Silversea zarpan a más")
+    print("   de 800 destinos en los siete continentes, más que ")
+    print("   cualquier otra línea de cruceros. Nuestros barcos")
+    print("   íntimos de lujo pueden navegar por estrechas vías hasta")
+    print("   el centro de una ciudad, o echar marras en el ")
+    print("   muelle cuando otros deben anclar lejos de la costa.")
+    print("   Y Silversea Expeditions puede transportar a aquellos")
+    print("   que desean explorar lugares nuevos y ")
+    print("   desconocidos a las fronteras más lejanas del planeta.")
+    print("   Famosos por su excelencia culinaria y su espíritu")
+    print("   innovador, los cruceros de lujo de Silversea ")
+    print("   ofrecen cenas con libre elección de asiento en toda")
+    print("   la flota, así como varios lugares de especialidades")
+    print("   a bordo de los barcos de no expedición. Disfrute de ")
+    print("   la facilidad, comodidad y las ventajas de una tarifa")
+    print("   de crucero todo incluido que incluye casi todos los")
+    print("   gastos discrecionales a bordo.")
+    print("")
+    print("")
+    print("   GRUPO - ROYALCARIBBEAN - INTERNATIOAL ®. ")
+    print("")
+    op()
+#---------------------------------------------------------------
+#       REGISTRO
+#---------------------------------------------------------------
+
+def nombr():
+    n=str(input("\tNombre :"))
+    while(not verificar(n)):
+        n=str(input("\tIngres su nombre correctamente :"))
+
+def apellidp():
+    n=str(input("\tApellido Paterno:"))
+    while(not verificar(n)):
+        n=str(input("\tIngres su apellido paterno correctamente :"))
+        
+def apellidm():
+    n=str(input("\tApellido Materno :"))
+    while(not verificar(n)):
+        n=str(input("\tIngres su apellido materno correctamente :"))
+
+def nacionalida():
+    n=str(input("\tNacionalidad :"))
+    while(not verificar(n)):
+        n=str(input("\tIngres su nacionalidad correctamente :"))
+
+def ciuda():
+    n=str(input("\tCiudad :"))
+    while(not verificar(n)):
+        n=str(input("\tIngres su apellido materno correctamente :"))    
+      
+def verificar(n):
+    for c in n:
+        if(ord(c)<65 or  ord(c)>90) and (ord(c)<97 or  ord(c)>122) and (ord(c)!=32):
+            return False
+    return True   
+
+#---------------------------------------------------------------
+#       MENU
+#---------------------------------------------------------------
+
+def menureser():
+    os.system("cls")
+    print("")
+    print("\tMENU RESERVACIONES CRUCERO")
+    print("")
+    print("\t[1]  |   Ver reservaciones")
+    print("\t[2]  |   Agregar reservaciones")
+    print("\t[3]  |   Modificar reservaciones")
+    print("\t[4]  |   Eliminar reservaciones")
+    print("\t[5]  |   Volver al menu principal")
+    print("")
+    re= input("\tDigite una opcion del menu: ")
+
+    if re== "1":
+        os.system("clear")
+        ver()
+    elif re== "2":
+        os.system("clear")
+        agregar()
+    elif re== "3":
+        modificar()
+    elif re== "4":
+        eliminar()
+    elif re== "5":
+        os.system ("cls")
+        menuprincipal()
+    else:
+        os.system("cls")
+        input("\tIngrese una opcion valida de nuestro MENU")
+        menureser()
+
+#---------------------------------------------------------------
+# Ver
+#---------------------------------------------------------------
+
+def ver():
+    os.system("cls")
+
+    con = sqlite3.connect("CARIBE.s3db")
+    cursor = con.cursor()
+    cursor.execute("SELECT * FROM registro")
+
+    print("\tReservaciones Registradas")
+    print("")
+    
+    for v in cursor:
+        print("\tReservacion:                   ", v[0])
+        print("\tNombres:                       ", v[1])
+        print("\tApellido Paterno:              ", v[2])
+        print("\tApellido Materno:              ", v[3])
+        print("\tN° de DNI:                     ", v[4])
+        print("\tN° de Pasaporte:               ", v[5])
+        print("\tN° de Visa:                    ", v[6])
+        print("\tNacionalidad:                  ", v[7])
+        print("\tCiudad de Origen:              ", v[8])
+        print("\tEmbarcacion:                   ", v[9])
+        print("\tPaquete de viaje:              ", v[10])
+        print("\tModalidad:                     ", v[11], "-", v[12])
+        print("\n\t------------------------------------------------------------\n")
+    con.close()
+    input("\tPresione 'Enter' para volver al menu...")
+    menureser()
+#---------------------------------------------------------------
+# Agregar
+#---------------------------------------------------------------
+
+def agregar():
+    os.system("cls")
+    print("")
+    print("\tAgregar Reservacion")
+    print("")
+
+    print("\tIngrese los datos que a continuacion se le piden POR FAVOR\n")
+    nombre=nombr()
+    apellidop=apellidp()
+    apellidom=apellidm()
+    nacionalidad=nacionalida()
+    ciudad=ciuda()
+    
+    #DNI
+    while True:
+        try:
+            c=1
+            while c!=8:
+                dni=int(input("\tDNI: "))
+                c=len(str(dni))
+                if c!=8:
+                    print("\tEl N° de Dni es incorrecto verifique porfavor.")
+            break
+        except ValueError:
+            print("\tEl N° de Dni es incorrecto verifique porfavor.")
+    dni=str(dni)
+
+    #PASAPORTE
+    while True:
+        try:
+            a=1
+            while a!=8:
+                pasaporte=int(input("\tPasaporte : "))
+                a=len(str(pasaporte))
+                if a!=8:
+                    print("\tEl N° de Pasaporte es incorrecto verifique porfavor.")
+            break
+        except ValueError:
+            print("\tEl N° de Pasaporte es incorrecto verifique porfavor.")
+    pasaporte=str(pasaporte)
+    #VISA
+    while True:
+        try:
+            v=1
+            while v!=8:
+                visa=int(input("\tVisa: "))
+                v=len(str(visa))
+                if v!=8:
+                    print("\tEl N° de Visa es incorrecto verifique porfavor.")
+            break
+        except ValueError:
+            print("\tEl N° de Visa es incorrecto verifique porfavor.")
+    visa=str(visa)
+
+    #EMBARCACION
+    print("\tEmbarcacion")
+    print("")
+    print("\t[1]  Embarcacion - SILVER MUSE")
+    print("\t[2]  Embarcacion - SILVER CLOUD")
+    print("\t[3]  Embarcacion - SILVER WIND")
+    print("\t[4]  Embarcacion - SILVER DISCOVER")
+    while True:
+        try:
+            
+            tr=0
+            while (tr!=1 and tr!=2 and tr!=3 and tr!=4):
+                tr=int(input("¿A que tipo de Embarcacion hara su reserva: "))
+                if tr==1:
+                    tres='SILVERMUSE'
+                elif tr==2:
+                    tres='SILVERCLOUD'
+                elif tr==3:
+                    tres='SILVERWIND'
+                elif tr==4:
+                    tres='SILVERDISCOVER'
+                else:
+                    print("Solo tenemos 4 embaraciones disponibles.")
+                    print("-SILVER MUSE")
+                    print("SILVER CLOUD")
+                    print("SILVER WIND")
+                    print("SILVER DISCOVER")
+                    print("Escoga una embarcacion disponible")
+            break
+        except ValueError:
+            print("Solo tenemos 4 embaraciones disponibles.")
+            print("-SILVER MUSE")
+            print("SILVER CLOUD")
+            print("SILVER WIND")
+            print("SILVER DISCOVER")
+            print("Escoga una embarcacion disponible")
+    tembarcacion()
+
+    con = sqlite3.connect("CARIBE.s3db")
+    cursor = con.cursor()
+    cursor.execute("insert into registro (nombre,apellidop,apellidom,dni,pasaporte,visa,nacionalidad,ciudad,embarcacion,thab1,thab2,thab3) values ('"+nombr+"','"+apellidp+"','"+apellidm+"','"+dni+"','"+pasaporte+"','"+visa+"','"+nacionalida+"','"+ciuda+"','"+tres+"','"+th1+"','"+th2+"','"+th3+"')")
+    con.commit()
+    con.close()
+    os.system("cls")
+    input("Reservacion registrada satisfactoriamente!")
+    menureser()
+#---------------------------------------------------------------
+# Embarcacion
+#---------------------------------------------------------------
+def tembarcacion():
+    global th1, th2, th3
+    
+    print("\tSeleccione un tipo de  Paquete ")
+    print("\t[1]   |    Paquete Premiun")
+    print("\t[2]   |    Paquete Silver")
+    print("\t[3]   |    Paquete Royalcaribbean")
+
+    while True:
+        try:
+            th1a=0
+            while (th1a!=1 and th1a!=2 and th1a!=3):
+                th1a=int(input("\tPaquete: "))
+                if th1a==1:
+                    th1='PaquetePremiun'
+                    print("")
+                    print("\tSeleccion la modalidad ")
+                    print("\t--------------------------------")
+                    print("\tSeleccione su modalidad ")
+                    print("\t[1]   |    Familiar 4 Personas")
+                    print("\t[2]   |    Familiar 5 Personas")
+                    print("\t[3]   |    Familiar 6 Personas")
+                    print("\t[4]   |    Pareja 2 Personas")
+                    print("\t[5]   |    Pareja Ederly 2 Personas")
+                    print("\t[6]   |    Alone 1")
+                    
+                    while True:
+                        try:
+                            th2a=0
+                            while (th2a!=1 and th2a!=2 and th2a!=3 and th2a!=4 and th2a!=5 and th2a!=6):
+                                th2a=int(input("\tTipo de modalidad: "))
+                                if th2a==1:
+                                    th2='Familiar'
+                                    th3=''
+                                if th2a==2:
+                                    th2='Familiar'
+                                    th3=''
+                                if th2a==3:
+                                    th2='Familiar'
+                                    th3=''
+                                elif th2a==4:
+                                    th2='Pareja'
+                                    th3=''
+                                elif th2a==5:
+                                    th2='Elderly'
+                                    th3=''
+                                if th2a==6:
+                                    th2='Alone'
+                                    th3=''
+                                else:
+                                    print("\tIngrese de modalidad valido")
+                            break
+                        except ValueError:
+                            print("\tSolo tenemos disponibles 6 modalidades ingrese nuevamente porfavor.")
+                elif th1a==2:
+                    th1='PaqueteSilver'
+                    print("\tSeleccion la modalidad ")
+                    print("\t--------------------------------")
+                    print("\tSeleccione su modalidad ")
+                    print("\t[1]   |    Familiar 3 Personas")
+                    print("\t[2]   |    Familiar 4 Personas")
+                    print("\t[3]   |    Familiar 5 Personas")
+                    print("\t[4]   |    Familiar 6 Personas")
+                    print("\t[5]   |    Pareja 2 Personas")
+                    print("\t[6]   |    Pareja Ederly 2 Personas")
+                    print("\t[7]   |    Alone 1")
+                    while True:
+                        try:
+                            th2a=0
+                            while (th2a!=1 and th2a!=2 and th2a!=3 and th2a!=4 and th2a!=5 and th2a!=6 and th2a!=7):
+                                th2a=int(input("\tTipo de Modalidad: "))
+                                if th2a==1:
+                                    th2='Familiar'
+                                    th3=''
+                                elif th2a==2:
+                                    th2='Familiar'
+                                    th3=''
+                                elif th2a==3:
+                                    th2='Familiar'
+                                    th3=''
+                                elif th2a==4:
+                                    th2='Familiar'
+                                    th3=''
+                                elif th2a==5:
+                                    th2='Pareja'
+                                    th3=''
+                                elif th2a==6:
+                                    th2='Ederly'
+                                    th3=''
+                                elif th2a==7:
+                                    th2='Alone'
+                                    th3=''
+                                else:
+                                    print("\tIngrese un tipo valido")
+                            break
+                        except ValueError:
+                            print("\tSolo tenemos disponibles 7 modalidades ingrese nuevamente porfavor.")
+                elif th1a==3:
+                    th1='PaqueteRoyalC'
+                    print("")
+                    print("\tSeleccion la modalidad ")
+                    print("\t--------------------------------")
+                    print("\t[1]   |    Familiar 4 Personas")
+                    print("\t[2]   |    Familiar 5 Personas")
+                    print("\t[3]   |    Pareja 2 Personas")
+                    print("\t[4]   |    Pareja Ederly 2 Personas")
+                    while True:
+                        try:
+                            th2a=0
+                            while (th2a!=1 and th2a!=2):
+                                th2a=int(input("\tTipo de Paquete: "))
+                                if th2a==1:
+                                    th2='PaqutePremiun'
+                                    print("")
+                                    print("\tSeleccion de tipo de viaje")
+                                    print("\t[1]    |    Normal")
+                                    print("\t[2]    |    Aventura")
+                                    print("\t--------------------------------")
+                                    
+                                    while True:
+                                        try:
+                                            th3a=0
+                                            while (th3a!=1 and th3a!=2):
+                                                th3a=int(input("\tTipo de viaje : "))
+                                                if th3a==1:
+                                                    th3='Normal'
+                                                elif th3a==2:
+                                                    th3='Aventura'
+                                                else:
+                                                    print("\tIngrese un tipo valido")
+                                            break
+                                        except ValueError:
+                                            print("\tSolo tenemos disponibles 2 tipos de viaje ingrese nuevamente porfavor.")
+                                elif th2a==2:
+                                    th2='KIND B'
+                                    print("")
+                                    print("\tSeleccion de tipo de viaje")
+                                    print("\t[1]    |    Normal")
+                                    print("\t[2]    |    Aventura")
+                                    print("\t[3]    |    Extremo")
+                                    print("\t[4]    |    Peace")
+                                    print("\t--------------------------------")
+                                    while True:
+                                        try:
+                                            th3a=0
+                                            while (th3a!=1 and th3a!=2 and th3a!=3 and th3a!=4):
+                                                th3a=int(input("\tTipo de viaje : "))
+                                                if th3a==1:
+                                                    th3='Normal'
+                                                elif th3a==2:
+                                                    th3='Aventura'
+                                                elif th3a==3:
+                                                    th3='Extremo'
+                                                elif th3a==4:
+                                                    th3='Peace'
+                                                else:
+                                                    print("\tIngrese un tipo valido")
+                                            break
+                                        except ValueError:
+                                            print("\tSolo tenemos disponibles 4 tipos de viaje ingrese nuevamente porfavor.")
+                                else:
+                                    print("\tIngrese una clase valida")
+                            break
+                        except ValueError:
+                            print("\tOpcion no disponible ingrese nuevamente porfavor.")
+                else:
+                    print("\tIngrese una clase valida")
+            break
+        except ValueError:
+            print("\tSolo tenemos 3 dis paquetes disponibles ingrese nuevamente porfavor")
+    
+
+#---------------------------------------------------------------
+# Modificar
+#---------------------------------------------------------------
+
+def modificar():
+    os.system("cls")
+
+    con = sqlite3.connect("CARIBE.s3db")
+    cursor = con.cursor()
+    cursor.execute("SELECT * FROM registro")
+
+    print("\tReservaciones Registradas")
+    print("")
+    
+    for v in cursor:
+        print("\tReservacion:                   ", v[0])
+        print("\tNombres:                       ", v[1])
+        print("\tApellido Paterno:              ", v[2])
+        print("\tApellido Materno:              ", v[3])
+        print("\tN° de DNI:                     ", v[4])
+        print("\tN° de Pasaporte:               ", v[5])
+        print("\tN° de Visa:                    ", v[6])
+        print("\tNacionalidad:                  ", v[7])
+        print("\tCiudad de Origen:              ", v[8])
+        print("\tEmbarcacion:                   ", v[9])
+        print("\tPaquete de viaje:              ", v[10])
+        print("\tModalidad:                     ", v[11], "-", v[12])
+        print("")
+
+    codigo = input("\tDigite el codigo del campo que desea modificar: ")
+
+    print("\n\tIngrese los datos en los siguientes campos para modificar: ")
+
+    nombre=nombr()
+    apellidop=apellidp()
+    apellidom=apellidm()
+    nacionalidad=nacionalida()
+    ciudad=ciuda()
+
+    #DNI
+    while True:
+        try:
+            c=1
+            while c!=8:
+                dni=int(input("\tDNI: "))
+                c=len(str(dni))
+                if c!=8:
+                    print("\tEl N° de Dni es incorrecto verifique porfavor.")
+            break
+        except ValueError:
+            print("\tEl N° de Dni es incorrecto verifique porfavor.")
+    dni=str(dni)
+
+    #PASAPORTE
+    while True:
+        try:
+            a=1
+            while a!=8:
+                pasaporte=int(input("\tPasaporte : "))
+                a=len(str(pasaporte))
+                if a!=8:
+                    print("\tEl N° de Pasaporte es incorrecto verifique porfavor.")
+            break
+        except ValueError:
+            print("\tEl N° de Pasaporte es incorrecto verifique porfavor.")
+    pasaporte=str(pasaporte)
+    #VISA
+    while True:
+        try:
+            v=1
+            while v!=8:
+                visa=int(input("\tVisa: "))
+                v=len(str(visa))
+                if v!=8:
+                    print("\tEl N° de Visa es incorrecto verifique porfavor.")
+            break
+        except ValueError:
+            print("\tEl N° de Visa es incorrecto verifique porfavor.")
+    visa=str(visa)
+
+    
+
+    print("\tNuestras Embarcaciones Disponibles")
+    print("")
+    print("\t[1]  Embarcacion - SILVER MUSE")
+    print("\t[2]  Embarcacion - SILVER CLOUD")
+    print("\t[3]  Embarcacion - SILVER WIND")
+    print("\t[4]  Embarcacion - SILVER DISCOVER")
+    while True:
+        try:
+            tr=0
+            while (tr!=1 and tr!=2):
+                tr=int(input("¿Que tipo de reservacion desea hacer(1,2): "))
+                if tr==1:
+                    tres='SILVER MUSE'
+                elif tr==2:
+                    tres='SILVER CLOUD'
+                elif tr==3:
+                    tres='SILVER WIND'
+                elif tr==4:
+                    tres='SILVER DISCOVER'
+                else:
+                    print("Ingrese un tipo de embarcacion valido")
+            break
+        except ValueError:
+            print("Solo tenemos 4 embaraciones disponibles.")
+    
+    tembarcacion()
+
+    cursor.execute("update registro set nombre = '"+nombr+"', apellidop = '"+apellidp+"', apellidom = '"+apellidm+"',nacionalidad = '"+nacionalida+"', ciudad = '"+ciuda+"', dni = '"+dni+"', pasaporte = '"+pasaporte+"', visa = '"+visa+"', thab1 = '"+th1+"', thab2 = '"+th2+"', thab3 = '"+th3+"', embarcacion = '"+tres+"' where ID = '"+codigo+"' ")
+    con.commit()
+    con.close()
+    os.system("cls")
+    input("Reservacion modificada")
+    menureser()
+#---------------------------------------------------------------
+# Eliminar
+#---------------------------------------------------------------
+
+
+def eliminar():
+    os.system("cls")
+
+    con = sqlite3.connect("CARIBE.s3db")
+    cursor = con.cursor()
+    cursor.execute("SELECT * FROM registro")
+
+    print("\tReservaciones Registradas")
+    print("")
+    
+    for v in cursor:
+        print("\tReservacion:                   ", v[0])
+        print("\tNombres:                       ", v[1])
+        print("\tApellido Paterno:              ", v[2])
+        print("\tApellido Materno:              ", v[3])
+        print("\tN° de DNI:                     ", v[4])
+        print("\tN° de Pasaporte:               ", v[5])
+        print("\tN° de Visa:                    ", v[6])
+        print("\tNacionalidad:                  ", v[7])
+        print("\tCiudad de Origen:              ", v[8])
+        print("\tEmbarcacion:                   ", v[9])
+        print("\tPaquete de viaje:              ", v[10])
+        print("\tModalidad:                     ", v[11], " - ", v[12])
+        print("")
+        print("\n-------------------------------------------------")
+
+    codigo = input("\tDigite el codigo del campo que desea eliminar: ")
+
+    cursor.execute("delete from registro where ID = '"+codigo+"' ")
+
+    con.commit()
+    con.close()
+    input("\tReservacion eliminada")
+
+    menureser()
+
+
