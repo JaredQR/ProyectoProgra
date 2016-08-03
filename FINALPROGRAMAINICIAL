@@ -1,0 +1,23 @@
+#Programa Crucero por el Caribe
+
+#1.-QUINCHO MAMANI, Jared
+#2.-SANTOS APAZA, Yordy Williams
+#3.-LLERENA CORRALES, Diana
+#4.-SUMARI MASCO, Patricia
+#5.-PAREDES MENDOZA, Gabriel
+#6.-AGUILAR MESTAS, Ronald
+
+#Importando
+
+import os
+import sys
+import time
+
+#Modulo
+
+from modulo import *
+
+
+
+menuprincipal()
+
