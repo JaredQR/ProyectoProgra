@@ -1,0 +1,154 @@
+import os
+import sys
+import sqlite3
+
+def eliminar():
+    os.system("cls")
+    con=sqlite3.connect("Reserva.s3db")
+    cursor=con.cursor()
+    cursor.execute("SELECT * from Registro")
+    for v in cursor:
+        print("codigo: ",v[0])
+        print("Pasajeros menores de 17 anios: ",v[1])
+        print("Pasajeros Adultos: ",v[2])
+        print("Nombre: ",v[3])
+        print("Apellidos: ",v[4])
+        print("telefono: ",v[5])
+        print("localidad: ",v[6])
+        print("Mes de salida: ",v[7])
+        print("Duracion: ",v[8])
+        print("Pais: ",v[9])
+        print("---------------")
+        
+    codigo=input("Digite el Codigo del Campo que desea eliminar:_")
+
+    cursor.execute("delete from Registro where ID ='"+codigo+"'")
+    con.commit()
+    con.close()
+    input("DAtos de Reserva Ha sido eliminado...")
+    menu()
+
+def modificar():
+    os.system("cls")
+    con=sqlite3.connect("Reserva.s3db")
+    cursor=con.cursor()
+    cursor.execute("select * from Registro")
+    for v in cursor:
+        print("codigo: ",v[0])
+        print("Pasajeros menores de 17 anios: ",v[1])
+        print("Pasajeros Adultos: ",v[2])
+        print("Nombre: ",v[3])
+        print("Apellidos: ",v[4])
+        print("telefono: ",v[5])
+        print("localidad: ",v[6])
+        print("Mes de salida: ",v[7])
+        print("Duracion: ",v[8])
+        print("Pais: ",v[9])
+        print("---------------")
+        
+    codigo=input("Digite el codigo del campo que desea modificar:_")
+    
+    print("ingrese los datos en los Siguientes Campos ha modificar: ")
+
+    men=input("Pasajeros menores de 17 anios: ")
+    may=input("Pasajeros Adultos: ")
+    name = input("Nombre: ")
+    ape = input("Apellidos: ")
+    tel = input("Telefono: ")
+    loc = input("Localidad: ")
+    mes = input("Mes de salida: ")
+    dura = input("Duracion: ")
+    pais = input("Pais: ")
+   
+    cursor.execute("update Registro set Pmenores='"+men+"', Padultos='"+may+"', Nombre='"+name+"', Apellido='"+ape+"',Telefono='"+tel+"',Localidad='"+loc+"',Msalida='"+mes+"',Duracion='"+dura+"',Pais='"+pais+"'where ID='"+codigo+"'")
+    con.commit()
+    con.close()
+    os.system("cls")
+    input("Reserva de Datos ha sido modificado con exito...")
+    menu()   
+
+def agregar():
+    os.system("cls")
+    print("Ingresar Nueva Reserva")
+    print("\n---------------------------------\n")
+    men=input("Pasajeros menores de 17 anios: ")
+    may=input("Pasajeros Adultos: ")
+    name = input("Nombre: ")
+    ape = input("Apellidos: ")
+    tel = input("Telefono: ")
+    loc = input("Localidad: ")
+    mes = input("Mes de salida: ")
+    dura = input("Duracion: ")
+    pais = input("Pais: ")
+    
+    con=sqlite3.connect("Reserva.s3db")
+    cursor=con.cursor()
+    cursor.execute("insert into Registro ( Pmenores,Padultos,Nombre,Apellido, Telefono, Localidad, Msalida, Duracion, Pais) Values ('"+men+"','"+may+"','"+name+"','"+ape+"','"+tel+"','"+loc+"','"+mes+"','"+dura+"','"+pais+"')")
+    con.commit()
+    con.close()
+    os.system("cls")
+    input("Datos Agregados satisfactoriamente...")
+    menu()
+
+
+def ver():
+    os.system("cls")
+    con=sqlite3.connect("Reserva.s3db")
+    cursor=con.cursor()
+    cursor.execute("select * from Registro")
+    print("\t Datos Ingresados en Sistema")
+    print("\t ---------------------------")
+  
+
+    for v in cursor:
+        print("--------------------------------------")
+        print("codigo: ",v[0])
+        print("Pasajeros menores de 17 anios: ",v[1])
+        print("Pasajeros Adultos: ",v[2])
+        print("Nombre: ",v[3])
+        print("Apellidos: ",v[4])
+        print("telefono: ",v[5])
+        print("localidad: ",v[6])
+        print("Mes de salida: ",v[7])
+        print("Duracion: ",v[8])
+        print("Pais: ",v[9])
+        print("--------------------------------------")
+        
+    input("presione enter para regresar al menu...")
+    con.close()
+    menu()
+    
+def menu():
+    os.system("cls")
+
+    print("\tRegistro de Reserva de Crucero")
+    print("\t------------------------------\n")
+    print("\t[1].Mostrar Reserva")
+    print("\t[2].Ingresar Reserva")
+    print("\t[3].Modificar Reserva")
+    print("\t[4].Eliminar Reserva")
+    print("\t[5].Cerrar")
+    print("\t")
+
+    
+    select=input("Elija la opcion que desea realizar: ")
+          
+            
+    if select=="1":
+        ver()
+    elif select=="2":
+        agregar()
+    elif select=="3":
+        modificar()
+    elif select=="4":
+        eliminar()
+    elif select=="5":
+        os.system("cls")
+        input("Saliendo de Programa....")
+        os.system("cls")
+        sys.exit()
+    else:
+        os.system("cls")
+        input("digite una opcion valida de menu")
+        menu()
+menu()
