@@ -1,0 +1,24 @@
+import sys
+import os
+import time
+
+from moduloreservaciones import*
+
+def menuprincipal():
+    os.system("cls")   
+    print("      -------------------------------------")
+    print("     |  ROYALCARIBBEAN - INTERNATIOAL ®.   |")
+    print("      -------------------------------------")
+    print("")
+    print("\t[1]  |     Pagina Principal.")
+    print("\t[2]  |     Reservaciones.")
+    print("\t[3]  |     Por que ROYALCARIBBEAN-INTERNATIONAL ®.")
+    print("\t[4]  |     Embarcaciones")
+    print("\t[5]  |     Promociones.")
+    print("\t[6]  |     A Bordo")
+    print("\t[7]  |     Restaurantes.")
+    print("\t[8]  |     Ayuda")
+    print("\t[9]  |     Configuracion")
+    print("\t[10] |     Salir del programa.")
+    print("")
+    t=input("\n\tIngrese la opcion que desee: ")
