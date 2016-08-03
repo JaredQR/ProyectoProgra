@@ -49,3 +49,38 @@ def menuprincipal():
     else:
         print("Ingrese un valor correcto")
         menuprincipal()
+
+def embarcacion():
+    print("")
+    os.system("cls")   
+    print("")
+    print("   NUESTRAS EMBARCACIONES")
+    print("")
+    print("\t[1]   |     EMBARCACION SILVER - MUSE      (Disponible) ")
+    print("\t[2]   |     EMBARCACION SILVER - CLOUD     (Disponible)")
+    print("\t[3]   |     EMBARCACION SILVER - WIND      (Disponible)")
+    print("\t[4]   |     EMBARCACION SILVER - DISCOVER  (Disponible)")
+    print("\t[5]   |     EMBARCACION SILVER - SHADOW    (Mantenimiento)")
+    print("\t[6]   |     EMBARCACION SILVER - WHISPER   (Navegando)")
+    print("\t[7]   |     EMBARCACION SILVER - SPIRIT    (Navegando)")
+    print("")
+    t=input("\n\tIngrese la opcion que desee: ")
+    print("")
+    if t=="1":
+        muse()
+    if t=="2":
+        cloud()
+    elif t=="3":
+        wind()
+    elif t=="4":
+        discover()
+    elif t=="5":
+        shadow()
+    elif t=="6":
+          whisper()
+    elif t=="7":
+          spirit()
+    else:
+          print("Ingrese una opcion valida, intente de nuevo porfavor...")
+          embarcacion()
+          print("")
